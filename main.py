@@ -8,7 +8,7 @@ from openai import OpenAI
 from collections import defaultdict
 
 # Initialize OpenAI client
-client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+client = OpenAI(api_key="REPLACE_ME")
 
 # ============================================================================
 # STUDENT TASK: Fill in this prompt template to classify the complaints
@@ -178,9 +178,4 @@ def main():
 
 if __name__ == "__main__":
     # Check for API key
-    if not os.environ.get("OPENAI_API_KEY"):
-        print("ERROR: Please set OPENAI_API_KEY environment variable")
-        print("In Repl.it: Use the Secrets tab (lock icon) to add OPENAI_API_KEY")
-        exit(1)
-    
     main()
