@@ -137,8 +137,8 @@ def main():
         predicted_labels.append(predicted_dept)
         
         status = "✅" if predicted_dept == true_dept else "❌"
-        print(f"{status} [{i}/30] True: {true_dept:10} | Predicted: {predicted_dept:10}")
-        print(f"   '{complaint[:60]}...'")
+        print(f"{status} [{i}/30] CORRECT ANSWER: {true_dept} | AI ANSWER: {predicted_dept}")
+        print(f"   '{complaint}")
     
     # Calculate and display metrics
     accuracy, metrics = calculate_metrics(true_labels, predicted_labels)
